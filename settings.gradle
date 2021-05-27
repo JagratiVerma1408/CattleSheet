@@ -1,0 +1,2 @@
+rootProject.name = "CattleSheet"
+include ':app'

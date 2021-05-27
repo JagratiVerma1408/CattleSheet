@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CattleSheet</string>
+    <string name="select_the_atmospheric_temperature_c_from_the_drop_down_list">Select the Atmospheric Temperature (°C) from the drop down list</string>
+    <string name="select_the_body_weight_of_the_animal_from_the_drop_down_list">Select the Body Weight of the animal from the drop down list</string>
+    <string name="select_the_fat_content_of_milk_from_the_drop_down_list">Select the fat Content of Milk from the drop down list</string>
+    <string name="enter_daily_milk_production_lit_h_d">Enter Daily Milk Production (lit./h/d)</string>
+    <string name="select_the_stage_of_pregnancy_from_the_drop_down_list">Select the Stage of Pregnancy from the drop down list</string>
+</resources>

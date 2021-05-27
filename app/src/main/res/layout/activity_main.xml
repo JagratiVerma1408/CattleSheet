@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context=".MainActivity">
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:text="@string/select_the_atmospheric_temperature_c_from_the_drop_down_list"
+        android:layout_height="wrap_content">
+    </TextView>
+    <Spinner
+        android:layout_margin="10dp"
+        android:id="@+id/temprature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:text="@string/select_the_body_weight_of_the_animal_from_the_drop_down_list"
+        android:layout_height="wrap_content">
+    </TextView>
+    <Spinner
+        android:layout_margin="10dp"
+        android:id="@+id/bodyWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:text="@string/select_the_fat_content_of_milk_from_the_drop_down_list"
+        android:layout_height="wrap_content">
+    </TextView>
+    <Spinner
+        android:layout_margin="10dp"
+        android:id="@+id/fatContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:text="@string/enter_daily_milk_production_lit_h_d"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:hint="Daily Milk Production"
+        android:id="@+id/milkProduction"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </EditText>
+    <TextView
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:text="@string/select_the_stage_of_pregnancy_from_the_drop_down_list"
+        android:layout_height="wrap_content">
+    </TextView >
+    <Spinner
+        android:layout_margin="10dp"
+        android:id="@+id/pregState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Spinner>
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="SAVE"
+      android:id="@+id/saveBtn"
+      android:layout_margin="15dp"
+      android:textSize="25dp"
+      android:layout_gravity="center"
+      android:textColor="@color/white"
+      android:backgroundTint="#4CAF50">
+
+  </Button>
+
+</LinearLayout>
