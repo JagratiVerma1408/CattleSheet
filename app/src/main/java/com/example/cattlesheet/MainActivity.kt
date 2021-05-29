@@ -11,6 +11,10 @@ import com.example.cattlesheet.Utils.Companion.pregnantStatus
 import com.example.cattlesheet.Utils.Companion.temperate
 
 class MainActivity : AppCompatActivity() {
+    lateinit var temp : String
+    lateinit var bw : String
+    lateinit var fc : String
+    lateinit var sp : String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +32,7 @@ class MainActivity : AppCompatActivity() {
                     parent: AdapterView<*>,
                     view: View, position: Int, id: Long
                 ) {
+                     temp = temperate[position].toString()
 //                    Toast.makeText(
 //                        this@MainActivity,
 //                        temperate[position], Toast.LENGTH_SHORT
@@ -56,6 +61,7 @@ class MainActivity : AppCompatActivity() {
                     parent: AdapterView<*>,
                     view: View, position: Int, id: Long
                 ) {
+                    bw=bodyWeight[position].toString()
 //                    Toast.makeText(
 //                        this@MainActivity,
 //                        bodyWeight[position].toString(), Toast.LENGTH_SHORT
@@ -84,6 +90,7 @@ class MainActivity : AppCompatActivity() {
                     parent: AdapterView<*>,
                     view: View, position: Int, id: Long
                 ) {
+                    fc= fatContentOfMilk[position].toString()
 //                    Toast.makeText(
 //                        this@MainActivity,
 //                        fatContentOfMilk[position].toString(), Toast.LENGTH_SHORT
@@ -112,6 +119,7 @@ class MainActivity : AppCompatActivity() {
                     parent: AdapterView<*>,
                     view: View, position: Int, id: Long
                 ) {
+                    sp=pregnantStatus[position]
 //                    Toast.makeText(
 //                        this@MainActivity,
 //                        pregnantStatus[position], Toast.LENGTH_SHORT
@@ -131,16 +139,20 @@ class MainActivity : AppCompatActivity() {
         save.setOnClickListener {
             val dailyMilkProduced: String = dailyMilkProduction.text.toString()
             //check if the EditText have values or not
-            if (dailyMilkProduced.trim().isNotEmpty()) {
+            if (dailyMilkProduced.trim().isNotEmpty() && dailyMilkProduced.toFloat()>=0F && dailyMilkProduced.toFloat()<=20F) {
                 val intent = Intent(this@MainActivity, Calculations::class.java)
-                intent.putExtra("product_name", dailyMilkProduction.text.toString())
+                intent.putExtra("temp",temp )
+                intent.putExtra("bodyWeight",bw)
+                intent.putExtra("fatContent", fc)
+                intent.putExtra("milkProduction", dailyMilkProduction.text.toString())
+                intent.putExtra("stagePregnancy", sp)
                 intent.flags =  Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                 startActivity(intent)
                 finish()
             } else {
                 Toast.makeText(
                     applicationContext,
-                    "Please enter some value in Daily Milk Production",
+                    "Please enter correct value in Daily Milk Production",
                     Toast.LENGTH_SHORT
                 ).show()
             }
