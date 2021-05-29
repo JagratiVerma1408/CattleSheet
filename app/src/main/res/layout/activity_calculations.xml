@@ -5,13 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Calculations">
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="35dp">
-
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="90dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -306,8 +303,453 @@
                     android:textSize="18dp"
                     android:textStyle="bold"></TextView>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tablelayout">
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row1"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/DR"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:lines="4"
+                            android:layout_weight="0.95"
+                            android:textColor="@color/black"
+                            android:text="Daily requirement  of different nutrients for"/>
+
+                        <TextView
+                            android:id="@+id/maintenance"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="Maintenance"
+                            android:layout_weight="0.95"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/milkProduction"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:lines="2"
+                            android:layout_weight="0.8"
+                            android:text="Milk Production"/>
+                        <TextView
+                            android:id="@+id/Pregnancy"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="Pregnancy"
+                            android:layout_weight="0.8"/>
+
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/tr"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:lines="2"
+                            android:layout_weight="0.9"
+                            android:text="Total requirement"/>
+
+                    </TableRow>
+                    <View
+                        android:layout_height="3dip"
+                        android:layout_width="match_parent"
+                        android:background="#ff0000"/>
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row2"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/energy"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:lines="2"
+                            android:layout_weight="0.95"
+                            android:textColor="@color/black"
+                            android:text="Energy (ME, Mcal)"/>
+                        <TextView
+                            android:id="@+id/m1"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:text="m1"
+                            android:layout_weight="0.95"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/mp1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:layout_weight="0.8"
+                            android:text="mp1"/>
+                        <TextView
+                            android:id="@+id/p1"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="p1"
+                            android:layout_weight="0.8"/>
+
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/tr1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:layout_weight="0.9"
+                            android:text="Tr1"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row3"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:lines="1"
+                            android:layout_weight="0.95"
+                            android:textColor="@color/black"
+                            android:text="CP (g)"/>
+                        <TextView
+                            android:id="@+id/m2"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="M2"
+                            android:layout_weight="0.95"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/mp2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:layout_weight="0.8"
+                            android:text="mp2"/>
+                        <TextView
+                            android:id="@+id/P2"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:text="P2"
+                            android:layout_weight="0.8"/>
+
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/tr2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:layout_weight="0.9"
+                            android:text="Tr2"/>
+
+                    </TableRow>
+                    <View
+                        android:layout_height="3dip"
+                        android:layout_width="match_parent"
+                        android:background="#ff0000"/>
+
+
+                    <View
+                        android:layout_height="30dip"
+                        android:layout_width="match_parent"/>
+
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row4"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:text=""/>
+                        <TextView
+                            android:id="@+id/option1"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:text="Option 1 (LF Only)"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/option2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="Option 2 (NLF Only)"/>
+
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/option3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Option 3 (LF+NGF Only)"/>
+
+                    </TableRow>
+                    <View
+                        android:layout_height="3dip"
+                        android:layout_width="match_parent"
+                        android:background="#ff0000"/>
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row5"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:text="Leguminous Green Fodder"/>
+                        <TextView
+                            android:id="@+id/LGF1"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="LGF1"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical"
+                            android:text="0.00"
+                            />
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/LGF3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:layout_gravity="center_vertical"
+                            android:text="LGF3"/>
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row6"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:text="Non Leguminous  Green Fodder"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="0.00"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/NLGF2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="NLGF2"
+                            />
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/NLGF3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="NLGF3"/>
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row7"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:text="Dry Fodder   "/>
+                        <TextView
+                            android:id="@+id/DR1"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="DR1"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/DR2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="clip_horizontal"
+                            android:text="DR2"
+                            android:gravity="center"
+                            />
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/DR3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:layout_gravity="clip_horizontal"
+                            android:gravity="center"
+                            android:text="DR3"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/table_row8"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:text="Concentrate"/>
+                        <TextView
+                            android:id="@+id/C1"
+                            android:textColor="#000"
+                            android:textStyle="bold"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            android:text="C1"/>
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/C2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="C2"
+                            />
+                        <TextView
+                            android:textColor="#000"
+                            android:id="@+id/C3"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:layout_gravity="clip_horizontal"
+                            android:text="C3"/>
+                    </TableRow>
+                    <View
+                        android:layout_height="3dip"
+                        android:layout_width="match_parent"
+                        android:background="#ff0000"/>
+
+                </TableLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_height="25dip"
+                    android:layout_width="match_parent"
+                    android:background="#ff0000"/>
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

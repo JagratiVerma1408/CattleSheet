@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Switch
+import android.widget.TableLayout
 import android.widget.TextView
 import android.widget.Toast
 import com.example.cattlesheet.Utils.Companion.pregnantStatus
@@ -20,6 +21,7 @@ class Calculations : AppCompatActivity() {
     lateinit var pregStatus :String
     lateinit var bodyWeight :String
     lateinit var maintananceA:TextView
+    lateinit var tablelayout:TableLayout
     lateinit var milkProductionB:TextView
     lateinit var pregnancyC :TextView
     lateinit var totalDryMatter : TextView
@@ -45,6 +47,7 @@ class Calculations : AppCompatActivity() {
         milkProductionB=findViewById(R.id.dryMattReqMilkPro)
         pregnancyC=findViewById(R.id.dryMattReqPreg)
         totalDryMatter=findViewById(R.id.totalReqDry)
+        tablelayout=findViewById(R.id.tablelayout)
         dmiMax=findViewById(R.id.maxDMI)
         actualDryMatter=findViewById(R.id.actualDryMatter)
         dailyWaterReq=findViewById(R.id.dailyWaterReq)
