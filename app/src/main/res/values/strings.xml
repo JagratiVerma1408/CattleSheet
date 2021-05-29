@@ -5,4 +5,7 @@
     <string name="select_the_fat_content_of_milk_from_the_drop_down_list">Select the fat Content of Milk from the drop down list</string>
     <string name="enter_daily_milk_production_lit_h_d">Enter Daily Milk Production (lit./h/d)</string>
     <string name="select_the_stage_of_pregnancy_from_the_drop_down_list">Select the Stage of Pregnancy from the drop down list</string>
+    <string name="daily_requirement_of_different_nutrients_for">Daily\nrequirement\nof different\nnutrients for</string>
+    <string name="milk_production">Milk\nProduction</string>
+    <string name="total_requirement">Total\nrequirement</string>
 </resources>

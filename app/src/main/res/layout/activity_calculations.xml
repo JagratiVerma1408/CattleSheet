@@ -12,7 +12,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -322,9 +321,10 @@
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:lines="4"
-                            android:layout_weight="0.95"
+                            android:textSize="10sp"
+                            android:layout_weight="1"
                             android:textColor="@color/black"
-                            android:text="Daily requirement  of different nutrients for"/>
+                            android:text="@string/daily_requirement_of_different_nutrients_for"/>
 
                         <TextView
                             android:id="@+id/maintenance"
@@ -333,8 +333,11 @@
                             android:layout_gravity="center"
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
+                            android:textSize="10sp"
+                            android:gravity="center"
                             android:text="Maintenance"
-                            android:layout_weight="0.95"/>
+                            android:lines="1"
+                            android:layout_weight="1"/>
                         <TextView
                             android:textColor="#000"
                             android:id="@+id/milkProduction"
@@ -344,8 +347,9 @@
                             android:gravity="center_horizontal"
                             android:textStyle="bold"
                             android:lines="2"
-                            android:layout_weight="0.8"
-                            android:text="Milk Production"/>
+                            android:textSize="10sp"
+                            android:layout_weight="1"
+                            android:text="@string/milk_production"/>
                         <TextView
                             android:id="@+id/Pregnancy"
                             android:textColor="#000"
@@ -354,8 +358,10 @@
                             android:gravity="center"
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
+                            android:lines="1"
+                            android:textSize="10sp"
                             android:text="Pregnancy"
-                            android:layout_weight="0.8"/>
+                            android:layout_weight="1"/>
 
                         <TextView
                             android:textColor="#000"
@@ -366,8 +372,9 @@
                             android:gravity="center_horizontal"
                             android:textStyle="bold"
                             android:lines="2"
-                            android:layout_weight="0.9"
-                            android:text="Total requirement"/>
+                            android:textSize="10sp"
+                            android:layout_weight="1"
+                            android:text="@string/total_requirement"/>
 
                     </TableRow>
                     <View
@@ -521,6 +528,7 @@
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
                             android:layout_weight="1"
+                            android:textSize="13sp"
                             android:text="Option 1 (LF Only)"/>
                         <TextView
                             android:textColor="#000"
@@ -531,6 +539,7 @@
                             android:layout_gravity="center"
                             android:textStyle="bold"
                             android:gravity="center"
+                            android:textSize="13sp"
                             android:text="Option 2 (NLF Only)"/>
 
                         <TextView
@@ -542,6 +551,7 @@
                             android:textStyle="bold"
                             android:layout_gravity="center"
                             android:gravity="center"
+                            android:textSize="13sp"
                             android:text="Option 3 (LF+NGF Only)"/>
 
                     </TableRow>
@@ -741,7 +751,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <View
-                    android:layout_height="25dip"
+                    android:layout_height="2dip"
                     android:layout_width="match_parent"
                     android:background="#ff0000"/>
             </LinearLayout>
