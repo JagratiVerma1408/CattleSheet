@@ -47,12 +47,13 @@ class Calculations : AppCompatActivity() {
     lateinit var dmiMax : TextView
     lateinit var actualDryMatter : TextView
     lateinit var dailyWaterReq : TextView
-    var a:Float = 0.00f
-    var b:Float = 0.00f
-    var c:Float = 0.00f
-    var total:Float = 0.00f
-    var dmax:Float = 0.0f
+    var a:Float = 0.000f
+    var b:Float = 0.000f
+    var c:Float = 0.000f
+    var total:Float = 0.000f
+    var dmax:Float = 0.000f
     val df= DecimalFormat("#.##")
+    val df1= DecimalFormat("#.###")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculations)
@@ -92,13 +93,13 @@ class Calculations : AppCompatActivity() {
         AMaintenance()
         BMilkProduction()
         CPregnanacy()
-        tr1.text=(m1.text.toString().toFloat() +mp1.text.toString().toFloat()+p1.text.toString().toFloat()).toString()
-        tr2.text=(m2.text.toString().toFloat() +mp2.text.toString().toFloat()+p2.text.toString().toFloat()).toString()
+        tr1.text=df.format(m1.text.toString().toFloat() +mp1.text.toString().toFloat()+p1.text.toString().toFloat()).toString()
+        tr2.text=(m2.text.toString().toInt() +mp2.text.toString().toInt()+p2.text.toString().toInt()).toString()
         total=a+b+c
         dailyWaterRequirement()
-        totalDryMatter.text=  df.format(total).toString()
-        dmiMax.text=  df.format(dmax).toString()
-        actualDryMatter.text= df.format(min(total,dmax)).toString()
+        totalDryMatter.text=  df1.format(total).toString()
+        dmiMax.text=  df1.format(dmax).toString()
+        actualDryMatter.text= df1.format(min(total,dmax)).toString()
         table2()
     }
 
@@ -121,7 +122,7 @@ class Calculations : AppCompatActivity() {
             750 ->a=16.20F
             800 ->a=17.28F
         }
-        maintananceA.text= df.format(a).toString()
+        maintananceA.text= df1.format(a).toString()
         when (bodyWeight.toInt()) {
             200 -> dmax= 8.00F
             250 -> dmax=10.00F
@@ -176,21 +177,21 @@ class Calculations : AppCompatActivity() {
     {
         val damp = milkProduction.toFloat()
         when (fatContent.toInt()) {
-            1-> b= (0.45*damp).toFloat()
-            2-> b= (0.51*damp).toFloat()
-            3-> b= (0.57*damp).toFloat()
-            4-> b = (0.64*damp).toFloat()
-            5-> b = (0.70*damp).toFloat()
+            3-> b= (0.45*damp).toFloat()
+            4-> b= (0.51*damp).toFloat()
+            5-> b= (0.57*damp).toFloat()
+            6-> b = (0.64*damp).toFloat()
+            7-> b = (0.70*damp).toFloat()
         }
-       milkProductionB.text= df.format(b).toString()
+       milkProductionB.text= df1.format(b).toString()
         when (fatContent.toInt()) {
-            1-> mp1.text= (1.05*damp).toString()
-            2-> mp1.text= (1.2*damp).toString()
-            3-> mp1.text= (1.34*damp).toString()
-            4-> mp1.text= (1.5*damp).toString()
-            5-> mp1.text= (1.64*damp).toString()
+            3-> mp1.text= (1.05*damp).toString()
+            4-> mp1.text= (1.2*damp).toString()
+            5-> mp1.text= (1.34*damp).toString()
+            6-> mp1.text= (1.5*damp).toString()
+            7-> mp1.text= (1.64*damp).toString()
         }
-        mp2.text= (96*damp).toString()
+        mp2.text= (96*damp).toInt().toString()
     }
 
     fun CPregnanacy()
@@ -226,9 +227,9 @@ class Calculations : AppCompatActivity() {
     {
         when(temp)
         {
-            temperate[0]->dailyWaterReq.text= df.format(min(total,dmax)*3).toString()
-            temperate[1]->dailyWaterReq.text=  df.format(min(total,dmax)*3.5).toString()
-            temperate[2]->dailyWaterReq.text= df.format(min(total,dmax)*4.5).toString()
+            temperate[0]->dailyWaterReq.text= df1.format(min(total,dmax)*3).toString()
+            temperate[1]->dailyWaterReq.text=  df1.format(min(total,dmax)*3.5).toString()
+            temperate[2]->dailyWaterReq.text= df1.format(min(total,dmax)*4.5).toString()
         }
     }
     fun table2()
@@ -257,7 +258,234 @@ class Calculations : AppCompatActivity() {
             20->x=50
             else -> {x=29}
         }
-        LGF1.text=(actualDryMatter.text.toString().toFloat()*x*0.05).toString()
+        LGF1.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.05).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=10
+            1 -> x=13
+            2 -> x=17
+            3 -> x=15
+            4-> x=15
+            5-> x=15
+            6-> x=10
+            7->x=10
+            8->x=15
+            9->x=15
+            10->x=15
+            11->x=15
+            12->x=15
+            13->x=15
+            14->x=15
+            15->x=15
+            16->x=15
+            17->x=15
+            18->x=15
+            19->x=20
+            20->x=20
+            else -> {x=10}
+        }
+        LGF3.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.05).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=50
+            1 -> x=50
+            2 -> x=50
+            3 -> x=50
+            4-> x=50
+            5-> x=50
+            6-> x=50
+            7->x=55
+            8->x=60
+            9->x=65
+            10->x=70
+            11->x=55
+            12->x=55
+            13->x=55
+            14->x=55
+            15->x=55
+            16->x=50
+            17->x=55
+            18->x=55
+            19->x=51
+            20->x=46
+            else -> {x=50}
+        }
+        NLGF2.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0333).toString()
+
+        when (milkProduction.toInt()) {
+            0 -> x=40
+            1 -> x=40
+            2 -> x=40
+            3 -> x=40
+            4-> x=40
+            5-> x=40
+            6-> x=40
+            7->x=45
+            8->x=40
+            9->x=45
+            10->x=50
+            11->x=50
+            12->x=55
+            13->x=45
+            14->x=40
+            15->x=40
+            16->x=35
+            17->x=35
+            18->x=35
+            19->x=31
+            20->x=40
+            else -> {x=40}
+        }
+        NLGF3.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0333).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=71
+            1 -> x=67
+            2 -> x=63
+            3 -> x=60
+            4-> x=56
+            5-> x=54
+            6-> x=55
+            7->x=53
+            8->x=51
+            9->x=49
+            10->x=47
+            11->x=47
+            12->x=45
+            13->x=43
+            14->x=39
+            15->x=35
+            16->x=38
+            17->x=32
+            18->x=23
+            19->x=17
+            20->x=10
+            else -> {x=71}
+        }
+        DF1.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=40
+            1 -> x=37
+            2 -> x=34
+            3 -> x=31
+            4-> x=28
+            5-> x=25
+            6-> x=25
+            7->x=20
+            8->x=15
+            9->x=10
+            10->x=5
+            11->x=14
+            12->x=13
+            13->x=11
+            14->x=8
+            15->x=5
+            16->x=10
+            17->x=3
+            18->x=0
+            19->x=0
+            20->x=0
+            else -> {x=40}
+        }
+        DF2.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=45
+            1 -> x=42
+            2 -> x=38
+            3 -> x=35
+            4-> x=31
+            5-> x=29
+            6-> x=30
+            7->x=25
+            8->x=25
+            9->x=20
+            10->x=15
+            11->x=15
+            12->x=10
+            13->x=15
+            14->x=15
+            15->x=10
+            16->x=15
+            17->x=15
+            18->x=10
+            19->x=5
+            20->x=0
+            else -> {x=71}
+        }
+        DF3.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=0
+            1 -> x=0
+            2 -> x=0
+            3 -> x=0
+            4-> x=0
+            5-> x=0
+            6-> x=10
+            7->x=11
+            8->x=12
+            9->x=13
+            10->x=14
+            11->x=15
+            12->x=16
+            13->x=17
+            14->x=18
+            15->x=19
+            16->x=20
+            17->x=25
+            18->x=30
+            19->x=35
+            20->x=40
+            else -> {x=0}
+        }
+        C1.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=10
+            1 -> x=13
+            2 -> x=16
+            3 -> x=19
+            4-> x=22
+            5-> x=25
+            6-> x=25
+            7->x=25
+            8->x=25
+            9->x=25
+            10->x=25
+            11->x=31
+            12->x=32
+            13->x=34
+            14->x=37
+            15->x=40
+            16->x=40
+            17->x=42
+            18->x=45
+            19->x=49
+            20->x=54
+            else -> {x=10}
+        }
+        C2.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
+        when (milkProduction.toInt()) {
+            0 -> x=5
+            1 -> x=5
+            2 -> x=5
+            3 -> x=10
+            4-> x=14
+            5-> x=16
+            6-> x=20
+            7->x=20
+            8->x=20
+            9->x=20
+            10->x=20
+            11->x=20
+            12->x=20
+            13->x=25
+            14->x=30
+            15->x=35
+            16->x=35
+            17->x=35
+            18->x=40
+            19->x=40
+            20->x=40
+            else -> {x=5}
+        }
+        C3.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
+
 
     }
 }

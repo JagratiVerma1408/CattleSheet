@@ -6,6 +6,10 @@
     <string name="enter_daily_milk_production_lit_h_d">Enter Daily Milk Production (lit./h/d)</string>
     <string name="select_the_stage_of_pregnancy_from_the_drop_down_list">Select the Stage of Pregnancy from the drop down list</string>
     <string name="daily_requirement_of_different_nutrients_for">Daily\nrequirement\nof different\nnutrients for</string>
-    <string name="milk_production">Milk\nProduction</string>
+    <string name="milk_production"> Milk\n Production </string>
     <string name="total_requirement">Total\nrequirement</string>
+    <string name="energy_me_mcal">Energy\n(ME, Mcal)</string>
+    <string name="option_1_lf_only">Option 1 (LF Only)</string>
+    <string name="option_2_n_nlf_only">Option 2 (NLF Only)</string>
+    <string name="option_3_n_lf_ngf_only">Option 3 (LF+NGF Only)</string>
 </resources>

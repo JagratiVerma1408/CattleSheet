@@ -33,10 +33,6 @@ class MainActivity : AppCompatActivity() {
                     view: View, position: Int, id: Long
                 ) {
                      temp = temperate[position].toString()
-//                    Toast.makeText(
-//                        this@MainActivity,
-//                        temperate[position], Toast.LENGTH_SHORT
-//                    ).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -62,10 +58,6 @@ class MainActivity : AppCompatActivity() {
                     view: View, position: Int, id: Long
                 ) {
                     bw=bodyWeight[position].toString()
-//                    Toast.makeText(
-//                        this@MainActivity,
-//                        bodyWeight[position].toString(), Toast.LENGTH_SHORT
-//                    ).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -91,10 +83,6 @@ class MainActivity : AppCompatActivity() {
                     view: View, position: Int, id: Long
                 ) {
                     fc= fatContentOfMilk[position].toString()
-//                    Toast.makeText(
-//                        this@MainActivity,
-//                        fatContentOfMilk[position].toString(), Toast.LENGTH_SHORT
-//                    ).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -120,10 +108,6 @@ class MainActivity : AppCompatActivity() {
                     view: View, position: Int, id: Long
                 ) {
                     sp=pregnantStatus[position]
-//                    Toast.makeText(
-//                        this@MainActivity,
-//                        pregnantStatus[position], Toast.LENGTH_SHORT
-//                    ).show()
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
