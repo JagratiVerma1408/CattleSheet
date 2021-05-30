@@ -67,7 +67,7 @@
     <EditText
         android:layout_margin="10dp"
         android:gravity="center"
-        android:hint="Range from 0 to 20"
+        android:hint="Range from 0 to 20 (only Integers)"
         android:id="@+id/milkProduction"
         android:inputType="numberDecimal"
         android:layout_width="match_parent"

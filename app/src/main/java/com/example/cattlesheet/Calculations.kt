@@ -1,15 +1,16 @@
 package com.example.cattlesheet
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.widget.Switch
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.TableLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.cattlesheet.Utils.Companion.pregnantStatus
 import com.example.cattlesheet.Utils.Companion.temperate
-import org.w3c.dom.Text
 import java.text.DecimalFormat
 import kotlin.math.min
 
@@ -42,7 +43,6 @@ class Calculations : AppCompatActivity() {
     lateinit var C3:TextView
     lateinit var C1:TextView
     lateinit var C2:TextView
-
     lateinit var totalDryMatter : TextView
     lateinit var dmiMax : TextView
     lateinit var actualDryMatter : TextView
@@ -60,7 +60,7 @@ class Calculations : AppCompatActivity() {
         temp = intent.getStringExtra("temp").toString()
         fatContent = intent.getStringExtra("fatContent").toString()
         milkProduction = intent.getStringExtra("milkProduction").toString()
-         pregStatus  = intent.getStringExtra("stagePregnancy").toString()
+        pregStatus  = intent.getStringExtra("stagePregnancy").toString()
         bodyWeight  = intent.getStringExtra("bodyWeight").toString()
         Toast.makeText(this,temp+fatContent+bodyWeight+pregStatus+milkProduction,Toast.LENGTH_SHORT).show()
         maintananceA=findViewById(R.id.dryMattReqMaintan)
@@ -175,7 +175,7 @@ class Calculations : AppCompatActivity() {
     }
     fun BMilkProduction()
     {
-        val damp = milkProduction.toFloat()
+        val damp = milkProduction.toInt()
         when (fatContent.toInt()) {
             3-> b= (0.45*damp).toFloat()
             4-> b= (0.51*damp).toFloat()
@@ -234,6 +234,7 @@ class Calculations : AppCompatActivity() {
     }
     fun table2()
     { var x:Int=0
+
         when (milkProduction.toInt()) {
             0 -> x=29
             1 -> x=33
@@ -407,7 +408,7 @@ class Calculations : AppCompatActivity() {
             18->x=10
             19->x=5
             20->x=0
-            else -> {x=71}
+            else -> {x=45}
         }
         DF3.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
         when (milkProduction.toInt()) {
@@ -487,5 +488,22 @@ class Calculations : AppCompatActivity() {
         C3.text=df.format(actualDryMatter.text.toString().toFloat()*x*0.0111).toString()
 
 
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.addImage) {
+              editUser()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun editUser() {
+        val intent = Intent(this@Calculations, MainActivity::class.java)
+        startActivity(intent)
     }
 }
