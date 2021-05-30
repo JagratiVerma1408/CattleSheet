@@ -2,13 +2,16 @@ package com.example.cattlesheet
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TableLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.cattlesheet.MainActivity.Companion.activtyChoosed
 import com.example.cattlesheet.Utils.Companion.pregnantStatus
 import com.example.cattlesheet.Utils.Companion.temperate
 import java.text.DecimalFormat
@@ -62,7 +65,6 @@ class Calculations : AppCompatActivity() {
         milkProduction = intent.getStringExtra("milkProduction").toString()
         pregStatus  = intent.getStringExtra("stagePregnancy").toString()
         bodyWeight  = intent.getStringExtra("bodyWeight").toString()
-        Toast.makeText(this,temp+fatContent+bodyWeight+pregStatus+milkProduction,Toast.LENGTH_SHORT).show()
         maintananceA=findViewById(R.id.dryMattReqMaintan)
         m1=findViewById(R.id.m1)
         m2=findViewById(R.id.m2)
@@ -504,6 +506,8 @@ class Calculations : AppCompatActivity() {
 
     private fun editUser() {
         val intent = Intent(this@Calculations, MainActivity::class.java)
-        startActivity(intent)
+        activtyChoosed=1
+        startActivityForResult(intent,100)
+
     }
 }
