@@ -187,13 +187,13 @@ class Calculations : AppCompatActivity() {
         }
        milkProductionB.text= df1.format(b).toString()
         when (fatContent.toInt()) {
-            3-> mp1.text= (1.05*damp).toString()
-            4-> mp1.text= (1.2*damp).toString()
-            5-> mp1.text= (1.34*damp).toString()
-            6-> mp1.text= (1.5*damp).toString()
-            7-> mp1.text= (1.64*damp).toString()
+            3-> mp1.text= df.format((1.05*damp).toString())
+            4-> mp1.text=  df.format((1.2*damp).toString())
+            5-> mp1.text=  df.format((1.34*damp).toString())
+            6-> mp1.text=   df.format((1.5*damp).toString())
+            7-> mp1.text=  df.format((1.64*damp).toString())
         }
-        mp2.text= (96*damp).toInt().toString()
+        mp2.text= (96*damp).toString()
     }
 
     fun CPregnanacy()
