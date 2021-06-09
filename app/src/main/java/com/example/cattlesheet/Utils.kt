@@ -9,21 +9,11 @@ import java.util.*
 
 class Utils {
     companion object{
-        val  temperate = listOf("ठंडा Cool<27","सामान्य Normal=27","गरम Hot>27")
+        val  temperateEng= listOf("Cool<27","Normal=27","Hot>27")
+        val  temperateHindi = listOf("ठंडा<27","सामान्य=27","गरम>27")
         val  bodyWeight = listOf(200,250,300,350,400,450,500,550,600,650,700,750,800)
         val fatContentOfMilk= listOf(3,4,5,6,7)
-        val pregnantStatus = listOf("गाभिन नहीं NP","6-7","7-8","8-9")
-        fun switchLocal(context: Context, lcode: String, activity: Activity) {
-            if (lcode.equals("", ignoreCase = true)) return
-            val resources: Resources = context.resources
-            val locale = Locale(lcode)
-            Locale.setDefault(locale)
-            val config = Configuration()
-            config.locale = locale
-            resources.updateConfiguration(config, resources.getDisplayMetrics())
-            //restart base activity
-            activity.finish()
-            activity.startActivity(activity.intent)
-        }
+        val pregnantStatusEnglish = listOf("Not Pregnant","6-7","7-8","8-9")
+        val pregnantStatusHindi= listOf("गाभिन नहीं","6-7","7-8","8-9")
     }
 }

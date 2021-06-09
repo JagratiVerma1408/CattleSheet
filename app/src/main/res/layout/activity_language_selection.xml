@@ -5,8 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     tools:context=".LanguageSelection">
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="70dp">
+
+    </Space>
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-medium"
+        android:text="Please Select Any One Language :"
+        android:layout_height="wrap_content">
+
+
+    </TextView>
+    <Space
+        android:layout_height="110dp"
+        android:layout_width="match_parent"
+        >
+
+    </Space>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <RadioGroup
         android:layout_width="wrap_content"
         android:id="@+id/radioGrp"
@@ -23,8 +50,8 @@
 
     </RadioButton>
     <Space
-        android:layout_width="10dp"
-        android:layout_height="10dp"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
         >
 
     </Space>
@@ -41,12 +68,20 @@
     </RadioGroup>
     <Space
         android:layout_width="10dp"
-        android:layout_height="20dp"
+        android:layout_height="40dp"
+        >
+
+    </Space>
+    </LinearLayout>
+    <Space
+        android:layout_width="10dp"
+        android:layout_height="70dp"
         >
 
     </Space>
     <androidx.cardview.widget.CardView
         android:layout_width="150dp"
+        android:layout_gravity="center"
         android:backgroundTint="#4CAF50"
         app:cardCornerRadius="25dp"
         android:id="@+id/next"
@@ -63,5 +98,5 @@
             android:text="Next">
 
         </TextView>
-    </androidx.cardview.widget.CardView>t
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

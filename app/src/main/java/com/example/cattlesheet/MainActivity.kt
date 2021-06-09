@@ -9,8 +9,12 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cattlesheet.Utils.Companion.bodyWeight
 import com.example.cattlesheet.Utils.Companion.fatContentOfMilk
-import com.example.cattlesheet.Utils.Companion.pregnantStatus
-import com.example.cattlesheet.Utils.Companion.temperate
+
+import com.example.cattlesheet.Utils.Companion.pregnantStatusEnglish
+import com.example.cattlesheet.Utils.Companion.pregnantStatusHindi
+
+import com.example.cattlesheet.Utils.Companion.temperateEng
+import com.example.cattlesheet.Utils.Companion.temperateHindi
 import kotlin.properties.Delegates
 
 @Suppress("DEPRECATION")
@@ -20,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var fc : String
     lateinit var sp : String
     lateinit var lang : String
+    lateinit var temprate : List<String>
+    lateinit var pregnantStatus : List<String>
     lateinit var tempSelect: TextView
     lateinit var selectmilkProd : TextView
     lateinit var selectBodyWeight : TextView
@@ -65,16 +71,20 @@ class MainActivity : AppCompatActivity() {
             if(lang=="hindi")
             {
                 setToHindiLng()
+                temprate=temperateHindi
+                pregnantStatus= pregnantStatusHindi
             }
             else
             {
                 setToEngLng()
+                temprate= temperateEng
+                pregnantStatus=pregnantStatusEnglish
             }
             val spinnertemp = findViewById<Spinner>(R.id.temprature)
             if (spinnertemp != null) {
                 val adapter = ArrayAdapter(
                     this,
-                    android.R.layout.simple_spinner_item, temperate
+                    android.R.layout.simple_spinner_item, temprate
                 )
                 spinnertemp.adapter = adapter
                 spinnertemp.onItemSelectedListener = object :
@@ -83,7 +93,7 @@ class MainActivity : AppCompatActivity() {
                         parent: AdapterView<*>,
                         view: View, position: Int, id: Long
                     ) {
-                        temp = temperate[position].toString()
+                        temp = temprate[position].toString()
                         editor.putInt("temp", position)
                         editor.apply()
                         editor.commit()
@@ -155,6 +165,7 @@ class MainActivity : AppCompatActivity() {
             }
             val spinnerPreg = findViewById<Spinner>(R.id.pregState)
             if (spinnerPreg != null) {
+
                 val adapter = ArrayAdapter(
                     this,
                     android.R.layout.simple_spinner_item, pregnantStatus
@@ -232,8 +243,18 @@ class MainActivity : AppCompatActivity() {
         else
         {
             lang = intent.getStringExtra("language").toString()
+            if(lang=="hindi")
+            {
+                temprate=temperateHindi
+                pregnantStatus= pregnantStatusHindi
+            }
+            else
+            {
+                temprate= temperateEng
+                pregnantStatus=pregnantStatusEnglish
+            }
             val intent = Intent(this@MainActivity, Calculations::class.java)
-            intent.putExtra("temp", temperate[temppos].toString())
+            intent.putExtra("temp", temprate[temppos].toString())
             intent.putExtra("bodyWeight", bodyWeight[bodyw].toString())
             intent.putExtra("fatContent", fatContentOfMilk[fatContent].toString())
             intent.putExtra("milkProduction", milkProduced.toString())

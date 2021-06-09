@@ -10,8 +10,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cattlesheet.LanguageSelection.Companion.activtylang
 import com.example.cattlesheet.MainActivity.Companion.activtyChoosed
-import com.example.cattlesheet.Utils.Companion.pregnantStatus
-import com.example.cattlesheet.Utils.Companion.temperate
+import com.example.cattlesheet.Utils.Companion.pregnantStatusEnglish
+import com.example.cattlesheet.Utils.Companion.pregnantStatusHindi
+import com.example.cattlesheet.Utils.Companion.temperateEng
+import com.example.cattlesheet.Utils.Companion.temperateHindi
 import java.text.DecimalFormat
 import kotlin.math.min
 
@@ -60,6 +62,8 @@ class   Calculations : AppCompatActivity() {
     lateinit var DailyWaterRequirement:TextView
     lateinit var totalDryMatter : TextView
     lateinit var dmiMax : TextView
+    lateinit var pregnantStatus:List<String>
+    lateinit var temperate : List<String>
     lateinit var actualDryMatter : TextView
     lateinit var dailyWaterReq : TextView
     lateinit var language : String
@@ -84,10 +88,14 @@ class   Calculations : AppCompatActivity() {
         if(language=="hindi")
         {
             setToHindi()
+            temperate=temperateHindi
+            pregnantStatus= pregnantStatusHindi
         }
         else
         {
             setToEnglish()
+            temperate=temperateEng
+            pregnantStatus= pregnantStatusEnglish
         }
         maintananceA=findViewById(R.id.dryMattReqMaintan)
         m1=findViewById(R.id.m1)
