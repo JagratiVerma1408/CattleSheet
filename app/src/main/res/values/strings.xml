@@ -5,11 +5,52 @@
     <string name="select_the_fat_content_of_milk_from_the_drop_down_list">Select the fat Content of Milk from the drop down list</string>
     <string name="enter_daily_milk_production_lit_h_d">Enter Daily Milk Production (lit./h/d)</string>
     <string name="select_the_stage_of_pregnancy_from_the_drop_down_list">Select the Stage of Pregnancy from the drop down list</string>
-    <string name="daily_requirement_of_different_nutrients_for">Daily\nrequirement\nof different\nnutrients for</string>
-    <string name="milk_production"> Milk\n Production </string>
-    <string name="total_requirement">Total\nrequirement</string>
-    <string name="energy_me_mcal">Energy\n(ME, Mcal)</string>
+    <string name="daily_requirement_of_different_nutrients_for">Daily requirement of different nutrients for</string>
+    <string name="milk_production"> Milk Production </string>
+    <string name="total_requirement">Total requirement</string>
+    <string name="energy_me_mcal">Energy (ME, Mcal)</string>
     <string name="option_1_lf_only">Option 1 (LF Only)</string>
     <string name="option_2_n_nlf_only">Option 2 (NLF Only)</string>
     <string name="option_3_n_lf_ngf_only">Option 3 (LF+NGF Only)</string>
+    <string name="save">SAVE</string>
+    <string name="dry_requirement_for_maintenance_kg">Dry Matter requirement for Maintenance (Kg) :</string>
+    <string name="dry_matter_requirement_milk_production_kg">Dry Matter requirement Milk production (Kg) :</string>
+    <string name="dry_matter_requirement_for_pregnancy_kg">Dry Matter requirement for Pregnancy (Kg) :</string>
+    <string name="total_dry_matte_requirement_kg">Total dry matter Requirement (Kg) :</string>
+    <string name="maximum_dmi_kg">Maximum DMI (Kg) :</string>
+    <string name="actual_dry_matter_kg">Actual Dry Matter (Kg) :</string>
+    <string name="daily_water_requirement_lit">Daily Water Requirement (lit) :</string>
+    <string name="leguminous_green_fodder">Leguminous Green Fodder</string>
+    <string name="non_leguminous_green_fodder">Non Leguminous Green Fodder</string>
+    <string name="dry_fodder">Dry Fodder</string>
+    <string name="concentrate">Concentrate</string>
+    <string name="next">Next </string>
+    <string name="pregnancy">Pregnancy</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="cp_g">CP (g)</string>
+<!--    Hindi strings for mainactivity-->
+
+<string name="temp_Select">लिस्ट से वातावरण का तापमान (°C) चुनिए</string>
+    <string name="rangehintHindi">सीमा ०-२० केवल पूर्णांक</string>
+    <string name="body_weight">लिस्ट से पशु का शरीर भार (kg) चुनिए</string>
+    <string name="fat_content">अगर पशु दूध दे रहा है तो लिस्ट से उसके दूध में वसा की मात्रा (%) चुनिए</string>
+    <string name="daily_milk_enter">दैनिक दुग्ध उत्पादन (ली./पशु/दिन) दर्ज कीजिये</string>
+    <string name="preganancySelect">लिस्ट से गर्भावस्था चुनिए</string>
+    <string name="dryMaterialHindi">शरीर रक्षा हेतु शुष्क पदार्थ की आवश्यकता (kg)</string>
+   <string name="dryMateraialMilkHindi" >दुग्ध उत्पादन हेतु शुष्क पदार्थ की आवश्यकता (kg)</string>
+    <string name="dryforpregnancyHindi">गर्भावस्था हेतु शुष्क पदार्थ की आवश्यकता (kg)</string>
+    <string name="totalDryMatterHindi">शुष्क पदार्थ की कुल आवश्यकता (kg)</string>
+    <string name="maxDMIHindi">अधिकतम शुष्क पदार्थ अंतर्ग्रहण</string>
+    <string name="actualDryMatterHindi" >वास्तविक शुष्क पदार्थ आवश्यकता</string>
+    <string name="totalDailyWaterHindi"> पानी की दैनिक आवश्यकता (lit)</string>
+    <string name="dailyNutrientsReqHindi">विभिन्न पोषक तत्वों की दैनिक आवश्यकता</string>
+    <string name="maintananceHindi"> शरीर रक्षा </string>
+    <string name="milkProductionHindi"> दुग्ध उत्पादन </string>
+    <string name="pregHindi">गर्भावस्था </string>
+    <string name="totalReqHindi">कुल आवश्यकता</string>
+    <string name="EnergyHindi">ऊर्जा (ME , Mcal)</string>
+    <string name="CPHindi">अपरिष्कृत प्रोटीन (g)</string>
+    <string name="nextHindi">अगला</string>
+    <string name="range_from_0_to_20_only_integers">Range from 0 to 20 (only Integers)</string>
+
 </resources>

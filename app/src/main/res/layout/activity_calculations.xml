@@ -23,8 +23,9 @@
 
                 <TextView
                     android:layout_width="200dp"
+                    android:id="@+id/drymattereq"
                     android:layout_height="wrap_content"
-                    android:text="Dry Matter requirement for \n Maintenance (Kg) : "
+                    android:text="@string/dry_requirement_for_maintenance_kg"
                     android:textColor="@color/black"
                     android:textSize="15dp"
                     android:textStyle="bold"></TextView>
@@ -69,8 +70,9 @@
 
                 <TextView
                     android:layout_width="200dp"
+                    android:id="@+id/dryMatterMilk"
                     android:layout_height="wrap_content"
-                    android:text="Dry Matter requirement \n Milk production (Kg) : "
+                    android:text="@string/dry_matter_requirement_milk_production_kg"
                     android:textColor="@color/black"
                     android:textSize="15dp"
                     android:textStyle="bold">
@@ -122,8 +124,9 @@
 
                 <TextView
                     android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:text="Dry Matter requirement for \n Pregnancy (Kg) : "
+                    android:id="@+id/dryMatterPreg"
+                    android:layout_height="match_parent"
+                    android:text="@string/dry_matter_requirement_for_pregnancy_kg"
                     android:textColor="@color/black"
                     android:textSize="15dp"
                     android:textStyle="bold">
@@ -169,8 +172,9 @@
 
                 <TextView
                     android:layout_width="190dp"
+                    android:id="@+id/totalDryMatterText"
                     android:layout_height="match_parent"
-                    android:text="Total dry matte \n Requirement (Kg) :"
+                    android:text="@string/total_dry_matte_requirement_kg"
                     android:textColor="@color/black"
                     android:textSize="15dp"
                     android:textStyle="bold">
@@ -205,7 +209,8 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="200dp"
-                    android:text="Maximum DMI (Kg) :"
+                    android:id="@+id/MaxDmi"
+                    android:text="@string/maximum_dmi_kg"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="15dp"
@@ -240,7 +245,8 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="200dp"
-                    android:text="Actual Dry Matter (Kg) :"
+                    android:id="@+id/ActualDryMatter"
+                    android:text="@string/actual_dry_matter_kg"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="15dp"
@@ -275,7 +281,8 @@
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
-                    android:text="Daily Water Requirement (lit) :"
+                    android:id="@+id/DailyWaterText"
+                    android:text="@string/daily_water_requirement_lit"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:textSize="15dp"
@@ -321,7 +328,7 @@
                         android:padding="5dp">
 
                         <TextView
-                            android:id="@+id/DR"
+                            android:id="@+id/dailyNutri_table"
                             android:textStyle="bold"
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
@@ -332,7 +339,7 @@
                             android:text="@string/daily_requirement_of_different_nutrients_for"/>
 
                         <TextView
-                            android:id="@+id/maintenance"
+                            android:id="@+id/maintenance_table"
                             android:textColor="#000"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -340,13 +347,13 @@
                             android:layout_width="0dp"
                             android:textSize="11sp"
                             android:gravity="center"
-                            android:text="Maintenance"
+                            android:text="@string/maintenance"
                             android:layout_marginStart="10dp"
                             android:lines="1"
                             android:layout_weight="1"/>
                         <TextView
                             android:textColor="#000"
-                            android:id="@+id/milkProduction"
+                            android:id="@+id/milkProduction_table"
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_gravity="center"
@@ -357,7 +364,7 @@
                             android:layout_weight="1"
                             android:text="@string/milk_production"/>
                         <TextView
-                            android:id="@+id/Pregnancy"
+                            android:id="@+id/Pregnancy_table"
                             android:textColor="#000"
                             android:textStyle="bold"
                             android:layout_gravity="center"
@@ -366,12 +373,12 @@
                             android:layout_width="0dp"
                             android:lines="1"
                             android:textSize="12sp"
-                            android:text="Pregnancy"
+                            android:text="@string/pregnancy"
                             android:layout_weight="1"/>
 
                         <TextView
                             android:textColor="#000"
-                            android:id="@+id/tr"
+                            android:id="@+id/totalReq_table"
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:layout_gravity="center"
@@ -394,7 +401,7 @@
                         android:padding="5dp">
 
                         <TextView
-                            android:id="@+id/energy"
+                            android:id="@+id/energy_table"
                             android:textStyle="bold"
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
@@ -454,12 +461,13 @@
 
                         <TextView
                             android:textStyle="bold"
+                            android:id="@+id/cp_table"
                             android:layout_height="wrap_content"
                             android:layout_width="0dp"
                             android:lines="1"
                             android:layout_weight="0.95"
                             android:textColor="@color/black"
-                            android:text="CP (g)"/>
+                            android:text="@string/cp_g"/>
                         <TextView
                             android:id="@+id/m2"
                             android:textColor="#000"
@@ -577,7 +585,7 @@
                             android:layout_width="match_parent"
                             android:layout_weight="1"
                             android:textColor="@color/black"
-                            android:text="Leguminous Green Fodder"/>
+                            android:text="@string/leguminous_green_fodder"/>
                         <TextView
                             android:id="@+id/LGF1"
                             android:textColor="#000"
@@ -622,7 +630,7 @@
                             android:layout_width="match_parent"
                             android:layout_weight="1"
                             android:textColor="@color/black"
-                            android:text="Non Leguminous  Green Fodder"/>
+                            android:text="@string/non_leguminous_green_fodder"/>
                         <TextView
                             android:textColor="#000"
                             android:textStyle="bold"
@@ -667,7 +675,7 @@
                             android:layout_width="match_parent"
                             android:layout_weight="1"
                             android:textColor="@color/black"
-                            android:text="Dry Fodder   "/>
+                            android:text="@string/dry_fodder"/>
                         <TextView
                             android:id="@+id/DR1"
                             android:textColor="#000"
@@ -714,7 +722,7 @@
                             android:layout_width="match_parent"
                             android:layout_weight="1"
                             android:textColor="@color/black"
-                            android:text="Concentrate"/>
+                            android:text="@string/concentrate"/>
                         <TextView
                             android:id="@+id/C1"
                             android:textColor="#000"

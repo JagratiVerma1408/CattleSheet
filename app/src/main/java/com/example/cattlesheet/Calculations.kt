@@ -2,15 +2,13 @@ package com.example.cattlesheet
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TableLayout
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.cattlesheet.LanguageSelection.Companion.activtylang
 import com.example.cattlesheet.MainActivity.Companion.activtyChoosed
 import com.example.cattlesheet.Utils.Companion.pregnantStatus
 import com.example.cattlesheet.Utils.Companion.temperate
@@ -18,7 +16,7 @@ import java.text.DecimalFormat
 import kotlin.math.min
 
 
-class Calculations : AppCompatActivity() {
+class   Calculations : AppCompatActivity() {
     lateinit var temp:String
     lateinit var fatContent:String
     lateinit var milkProduction :String
@@ -46,10 +44,25 @@ class Calculations : AppCompatActivity() {
     lateinit var C3:TextView
     lateinit var C1:TextView
     lateinit var C2:TextView
+    lateinit var materialText :TextView
+    lateinit var pregText:TextView
+    lateinit var totalDryMatterText : TextView
+    lateinit var milkproductText :TextView
+    lateinit var maxDmiTable :TextView
+    lateinit var actualDryMatterText :TextView
+    lateinit var nutrienttsTable : TextView
+    lateinit var tableMaintanince : TextView
+    lateinit var tablePreg : TextView
+    lateinit var tablemilkProd : TextView
+    lateinit var tableTotalReq : TextView
+    lateinit var energyTable : TextView
+    lateinit var CP : TextView
+    lateinit var DailyWaterRequirement:TextView
     lateinit var totalDryMatter : TextView
     lateinit var dmiMax : TextView
     lateinit var actualDryMatter : TextView
     lateinit var dailyWaterReq : TextView
+    lateinit var language : String
     var a:Float = 0.000f
     var b:Float = 0.000f
     var c:Float = 0.000f
@@ -65,6 +78,17 @@ class Calculations : AppCompatActivity() {
         milkProduction = intent.getStringExtra("milkProduction").toString()
         pregStatus  = intent.getStringExtra("stagePregnancy").toString()
         bodyWeight  = intent.getStringExtra("bodyWeight").toString()
+        bodyWeight  = intent.getStringExtra("bodyWeight").toString()
+        language=intent.getStringExtra("language").toString()
+        textViews()
+        if(language=="hindi")
+        {
+            setToHindi()
+        }
+        else
+        {
+            setToEnglish()
+        }
         maintananceA=findViewById(R.id.dryMattReqMaintan)
         m1=findViewById(R.id.m1)
         m2=findViewById(R.id.m2)
@@ -84,7 +108,6 @@ class Calculations : AppCompatActivity() {
         C1=findViewById(R.id.C1)
         C2=findViewById(R.id.C2)
         C3=findViewById(R.id.C3)
-
         milkProductionB=findViewById(R.id.dryMattReqMilkPro)
         pregnancyC=findViewById(R.id.dryMattReqPreg)
         totalDryMatter=findViewById(R.id.totalReqDry)
@@ -501,13 +524,80 @@ class Calculations : AppCompatActivity() {
         if (id == R.id.addImage) {
               editUser()
         }
+        if(id==R.id.language)
+        {
+            editLanguage()
+        }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun editLanguage() {
+        val intent = Intent(this@Calculations, LanguageSelection::class.java)
+        activtylang=1
+        startActivityForResult(intent,10)
+
     }
 
     private fun editUser() {
         val intent = Intent(this@Calculations, MainActivity::class.java)
         activtyChoosed=1
+        intent.putExtra("language",language)
         startActivityForResult(intent,100)
 
+    }
+    fun textViews()
+    {
+        materialText=findViewById(R.id.drymattereq)
+        tablePreg=findViewById(R.id.Pregnancy_table)
+        tableTotalReq=findViewById(R.id.totalReq_table)
+        pregText=findViewById(R.id.dryMatterPreg)
+         milkproductText =findViewById(R.id.dryMatterMilk)
+         maxDmiTable =findViewById(R.id.MaxDmi)
+        actualDryMatterText =findViewById(R.id.ActualDryMatter)
+         nutrienttsTable =findViewById(R.id.dailyNutri_table)
+         tableMaintanince = findViewById(R.id.maintenance_table)
+       tablemilkProd  = findViewById(R.id.milkProduction_table)
+       energyTable =findViewById(R.id.energy_table)
+        CP =findViewById(R.id.cp_table)
+         DailyWaterRequirement=findViewById(R.id.DailyWaterText)
+        totalDryMatterText=findViewById(R.id.totalDryMatterText)
+
+
+
+
+  }
+    fun setToHindi()
+    {
+        materialText.text=getString(R.string.dryMaterialHindi)
+        tablePreg.text=getString(R.string.pregHindi)
+        tableTotalReq.text=getString(R.string.totalReqHindi)
+        pregText.text=getString(R.string.dryforpregnancyHindi)
+        milkproductText.text =getString(R.string.dryMateraialMilkHindi)
+        maxDmiTable.text=getString(R.string.maxDMIHindi)
+        actualDryMatterText.text =getString(R.string.actualDryMatterHindi)
+        nutrienttsTable.text = getString(R.string.dailyNutrientsReqHindi)
+        tableMaintanince.text  = getString(R.string.maintananceHindi)
+        tablemilkProd.text  = getString(R.string.milkProductionHindi)
+        energyTable.text =getString(R.string.EnergyHindi)
+        CP.text = getString(R.string.CPHindi)
+        DailyWaterRequirement.text=getString(R.string.totalDailyWaterHindi)
+        totalDryMatterText.text=getString(R.string.totalDryMatterHindi)
+    }
+    fun setToEnglish()
+    {
+        materialText.text=getString(R.string.dry_requirement_for_maintenance_kg)
+        tablePreg.text=getString(R.string.pregnancy)
+        tableTotalReq.text=getString(R.string.total_requirement)
+        pregText.text=getString(R.string.dry_matter_requirement_for_pregnancy_kg)
+        milkproductText.text =getString(R.string.dry_matter_requirement_milk_production_kg)
+        maxDmiTable.text=getString(R.string.maximum_dmi_kg)
+        actualDryMatterText.text =getString(R.string.actual_dry_matter_kg)
+        nutrienttsTable.text = getString(R.string.daily_requirement_of_different_nutrients_for)
+        tableMaintanince.text  = getString(R.string.maintenance)
+        tablemilkProd.text  = getString(R.string.milk_production)
+        energyTable.text =getString(R.string.energy_me_mcal)
+        CP.text = getString(R.string.cp_g)
+        DailyWaterRequirement.text=getString(R.string.daily_water_requirement_lit)
+        totalDryMatterText.text=getString(R.string.total_dry_matte_requirement_kg)
     }
 }

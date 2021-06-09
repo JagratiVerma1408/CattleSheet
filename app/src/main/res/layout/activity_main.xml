@@ -8,6 +8,7 @@
     android:layout_weight="1"
     tools:context=".MainActivity">
     <TextView
+        android:id="@+id/select_temp"
         android:textStyle="bold"
         android:textSize="20dp"
         android:textColor="@color/black"
@@ -25,6 +26,7 @@
     </Spinner>
     <TextView
         android:textStyle="bold"
+        android:id="@+id/select_body_Weight"
         android:textSize="20dp"
         android:textColor="@color/black"
         android:layout_margin="20dp"
@@ -42,6 +44,7 @@
     <TextView
         android:textStyle="bold"
         android:textSize="20dp"
+        android:id="@+id/fat_content_select"
         android:textColor="@color/black"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
@@ -58,6 +61,7 @@
     <TextView
         android:textStyle="bold"
         android:textSize="20dp"
+        android:id="@+id/select_milk_production"
         android:textColor="@color/black"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
@@ -67,7 +71,7 @@
     <EditText
         android:layout_margin="10dp"
         android:gravity="center"
-        android:hint="Range from 0 to 20 (only Integers)"
+        android:hint="@string/range_from_0_to_20_only_integers"
         android:id="@+id/milkProduction"
         android:inputType="numberDecimal"
         android:layout_width="match_parent"
@@ -80,6 +84,7 @@
         android:textColor="@color/black"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
+        android:id="@+id/select_pregnancy"
         android:text="@string/select_the_stage_of_pregnancy_from_the_drop_down_list"
         android:layout_height="wrap_content">
     </TextView >
@@ -93,7 +98,7 @@
   <Button
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:text="SAVE"
+      android:text="@string/save"
       android:id="@+id/saveBtn"
       android:layout_margin="15dp"
       android:textSize="25dp"
