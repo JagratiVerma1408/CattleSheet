@@ -6,7 +6,7 @@ Android app primarily for farmers that was developed for ICAR-Central Institute 
 * Support for Light & Dark mode.
 * Simple UI.
 * Hindi and English language support. 
-* Data entery required only once after that it's saved. 
+* Data entery required only once after that it's saved and has a option to edit it if required. 
 
 ## Screenshots
 
