@@ -10,7 +10,11 @@ Android app primarily for farmers that was developed for ICAR-Central Institute 
 
 ## Screenshots
 
-<img src="https://github.com/Pratyaksh777/VideoStreamingapp/blob/master/Screenshots/Screenshot_20210801-182411_Netflix.jpg" width=160>
+<img src="https://github.com/JagratiVerma1408/CattleSheet/blob/master/Screenshots/Screenshot_2021-08-01-20-30-05-120_com.example.cattlesheet.jpg" width=160>
+<img src="https://github.com/JagratiVerma1408/CattleSheet/blob/master/Screenshots/Screenshot_2021-08-01-20-30-26-463_com.example.cattlesheet.jpg" width=160>
+<img src="https://github.com/JagratiVerma1408/CattleSheet/blob/master/Screenshots/Screenshot_2021-08-01-20-46-10-095_com.example.cattlesheet.jpg" width=160>
+<img src="https://github.com/JagratiVerma1408/CattleSheet/blob/master/Screenshots/IMG_20210801_203049.jpg" width=160>
+<img src="https://github.com/JagratiVerma1408/CattleSheet/blob/master/Screenshots/IMG_20210801_210316.jpg" width=160>
 
 
 
